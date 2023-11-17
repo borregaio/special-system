@@ -6,6 +6,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -31,13 +32,13 @@ p {
 /* Header Styles */
 
 header {
-  height: 90px;
+  height: 100px;
   width: 100%;
   background-color: var(--color1);
 }
 
 header h1 {
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
 header {
@@ -52,8 +53,10 @@ nav {
   flex-direction: row;
 }
 
-nav h3 {
-  margin-right: 10px;
+nav a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black; /*add var root */
 }
 
 
@@ -62,7 +65,10 @@ nav h3 {
 .hero-banner {
   height: 400px;
   width: 100%;
-  background-color: var(--color2);
+  background-image: url(../images/main.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
   justify-content: end;
@@ -70,4 +76,63 @@ nav h3 {
 
 .hero-banner h2 {
   padding: 30px;
+}
+
+/* Page Wrapper Styles */
+
+.page-wrapper {
+  padding: 30px;
+}
+
+
+/* About Me Styles */
+
+#about, #work, #contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "about-title about-content";
+  padding: 50px 0 50px 0;
+}
+
+#about {
+  background-color: var(--color3);
+}
+
+#about h2, #work h2, #contact h2 {
+  text-align: right;
+  padding: 30px 30px 0 0;
+}
+
+#about p {
+  padding: 30px 50px 30px 30px;
+  text-align: justify;
+}
+
+#work {
+  height: 500px;
+  background-color: var(--color1);
+}
+
+#about h2, #work h2 {
+  grid-area: about-title;   /*Create classes for this*/
+}
+
+.content { /*change this class*/
+  grid-area: about-content;
+  border-left: 3px black solid;
+}
+
+
+/* Contact Me Styles */
+
+#contact {
+  height: 200px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
