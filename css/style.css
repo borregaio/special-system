@@ -1,7 +1,10 @@
 :root {
-  --color1: skyblue;
-  --color2: bisque;
-  --color3: aquamarine;
+  --color1: #F8F6F4;
+  --color2: #13005A;
+  --color3: #00337C;
+  --color4: #1C82AD;
+  --color5: #03C988;
+  
 }
 
 * {
@@ -14,6 +17,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: var(--color3);
 }
 
 h1,
@@ -27,6 +31,7 @@ h6 {
 
 p {
   margin: 0;
+  color: var(--color1);
 }
 
 /* Header Styles */
@@ -34,18 +39,16 @@ p {
 header {
   height: 100px;
   width: 100%;
-  background-color: var(--color1);
-}
-
-header h1 {
-  margin-left: 50px;
-}
-
-header {
+  background-color: var(--color2);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+header h1 {
+  margin-left: 50px;
+  color: var(--color1);
 }
 
 nav {
@@ -56,7 +59,7 @@ nav {
 nav a {
   margin-right: 30px;
   text-decoration: none;
-  color: black; /*add var root */
+  color: var(--color1);
 }
 
 
@@ -66,7 +69,7 @@ nav a {
   height: 400px;
   width: 100%;
   background-image: url(../images/main.jpg);
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -76,6 +79,9 @@ nav a {
 
 .hero-banner h2 {
   padding: 30px;
+  font-size: 40px;
+  color: var(--color1);
+  text-shadow: 3px 3px var(--color2);
 }
 
 /* Page Wrapper Styles */
@@ -84,43 +90,40 @@ nav a {
   padding: 30px;
 }
 
-
-/* About Me Styles */
+/* Portfolio Sections Styles */
 
 #about, #work, #contact {
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-areas: "about-title about-content";
+  grid-template-areas: "title content";
   padding: 50px 0 50px 0;
 }
 
-#about {
-  background-color: var(--color3);
+#title {
+  text-align: right;
+  font-size: 30px;
+  padding: 30px 30px 0 0;
+  grid-area: title;
+  color: var(--color5)
 }
 
-#about h2, #work h2, #contact h2 {
-  text-align: right;
-  padding: 30px 30px 0 0;
+#content {
+  grid-area: content;
 }
+
+#content, #footer {
+  border-left: 3px var(--color4) solid;
+}
+
+/*  */
+
+
+/* About Me Styles */
 
 #about p {
   padding: 30px 50px 30px 30px;
   text-align: justify;
-}
-
-#work {
-  height: 100%;
-  background-color: var(--color1);
-}
-
-#about h2, #work h2 {
-  grid-area: about-title;   /*Create classes for this*/
-}
-
-.content, .footer { /*change this class*/
-  grid-area: about-content;
-  border-left: 3px black solid;
 }
 
 /* Work Styles */
@@ -138,46 +141,52 @@ nav a {
   justify-content: center;
 }
 
+.project1, .project2, .project3, .project4, .project5 {
+  border: 10px var(--color4) solid;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project2, .project3, .project4, .project5 {
+  background-image: url(../images/project2.jpg);
+} 
+
 .project1 {
   grid-area: project1;
-  background-image: url(../images/02-portfolio-1.jpg);
-  border: 10px var(--color2) solid;
+  background-image: url(../images/project1.jpg);
 }
 
 .project2 {
   grid-area: project2;
-  background-image: url(../images/02-portfolio-2.jpg);
-  border: 10px var(--color2) solid;
 }
 
 .project3 {
   grid-area: project3;
-  background-image: url(../images/02-portfolio-3.jpg);
-  border: 10px var(--color2) solid;
 }
 
 .project4 {
   grid-area: project4;
-  background-image: url(../images/02-portfolio-4.jpg);
-  border: 10px var(--color2) solid;
 }
 
 .project5 {
   grid-area: project5;
-  background-image: url(../images/02-portfolio-4.jpg);
-  border: 10px var(--color2) solid;
 }
 
 
 /* Contact Me Styles */
 
 #contact {
-  height: 200px;
+  height: 300px;
 }
 
-.footer {
+#footer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+
+#footer a {
+  font-size: 20px;
 }
