@@ -110,7 +110,7 @@ nav a {
 }
 
 #work {
-  height: 500px;
+  height: 100%;
   background-color: var(--color1);
 }
 
@@ -118,9 +118,54 @@ nav a {
   grid-area: about-title;   /*Create classes for this*/
 }
 
-.content { /*change this class*/
+.content, .footer { /*change this class*/
   grid-area: about-content;
   border-left: 3px black solid;
+}
+
+/* Work Styles */
+
+#projects {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 300px 200px 200px;
+  grid-template-columns: 45% 45%;
+  grid-template-areas: "project1 project1"
+  "project2 project3"
+  "project4 project5";
+  padding: 50px 0 50px 0;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project1 {
+  grid-area: project1;
+  background-image: url(../images/02-portfolio-1.jpg);
+  border: 10px var(--color2) solid;
+}
+
+.project2 {
+  grid-area: project2;
+  background-image: url(../images/02-portfolio-2.jpg);
+  border: 10px var(--color2) solid;
+}
+
+.project3 {
+  grid-area: project3;
+  background-image: url(../images/02-portfolio-3.jpg);
+  border: 10px var(--color2) solid;
+}
+
+.project4 {
+  grid-area: project4;
+  background-image: url(../images/02-portfolio-4.jpg);
+  border: 10px var(--color2) solid;
+}
+
+.project5 {
+  grid-area: project5;
+  background-image: url(../images/02-portfolio-4.jpg);
+  border: 10px var(--color2) solid;
 }
 
 
