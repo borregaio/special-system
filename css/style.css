@@ -1,3 +1,5 @@
+/* General Styles */
+
 :root {
   --color1: #F8F6F4;
   --color2: #13005A;
@@ -9,28 +11,30 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2;
   background-color: var(--color3);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+p {
+  color: var(--color1);
+  padding: 30px 50px;
+  text-align: justify;
 }
 
-p {
-  margin: 0;
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  margin-right: 30px;
+  text-decoration: none;
   color: var(--color1);
 }
 
@@ -50,19 +54,6 @@ header h1 {
   margin-left: 50px;
   color: var(--color1);
 }
-
-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-nav a {
-  margin-right: 30px;
-  text-decoration: none;
-  color: var(--color1);
-}
-
-/*add class to nav
 
 /* Hero Banner Styles */
 
@@ -100,34 +91,24 @@ nav a {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-areas: "title content";
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
 }
 
-#title {
+.title {
   text-align: right;
   font-size: 30px;
-  padding: 30px 30px 0 0;
+  padding-right: 30px;
+  color: var(--color5);
   grid-area: title;
-  color: var(--color5)
 }
 
-#content {
+.content {
   grid-area: content;
 }
 
-#content,
-#footer {
+.content,
+.contact-links {
   border-left: 3px var(--color4) solid;
-}
-
-/*  */
-
-
-/* About Me Styles */
-
-#about p {
-  padding: 30px 50px 30px 30px;
-  text-align: justify;
 }
 
 /* Work Styles */
@@ -140,9 +121,15 @@ nav a {
   grid-template-areas: "project1 project1"
     "project2 project3"
     "project4 project5";
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
   gap: 30px;
   justify-content: center;
+}
+
+#projects h3 {
+  color: var(--color1);
+  text-shadow: 2px 2px var(--color2);
+  font-size: 25px;
 }
 
 .project1,
@@ -188,36 +175,29 @@ nav a {
   grid-area: project5;
 }
 
-#projects h3 {
-  text-align: center;
-  color: var(--color1);
-  text-shadow: 2px 2px var(--color2);
-  font-size: 25px;
-}
-
-
 /* Contact Me Styles */
 
 #contact {
   height: 300px;
 }
 
-#footer {
+.contact-links {
   display: flex;
   justify-content: space-evenly;
   padding-top: 60px;
 }
 
-#footer a {
+.contact-links a {
   font-size: 20px;
 }
 
+/* Media Queries */
 
-/* Media Queries  */
-/* 768 tablets
-480 phones */
+/* Tablet Styles */
 
 @media only screen and (max-width: 768px) {
+
+  /* Work Styles */
 
   #projects {
     grid-template-rows: 300px 300px 300px 300px 300px;
@@ -229,20 +209,24 @@ nav a {
       "project5";
   }
 
-  #footer {
+  /* Contact Me Styles */
+
+  .contact-links {
     justify-content: center;
   }
 
-  #footer a {
-    font-size: 16px;
+  .contact-links a {
+    font-size: 18px;
     ;
   }
 
-
 }
 
+/* Phone Styles */
 
 @media only screen and (max-width: 480px) {
+
+  /* Header Styles */
 
   header {
     height: 100%;
@@ -252,7 +236,6 @@ nav a {
 
   header h1 {
     margin-left: 0;
-    ;
     padding: 30px;
   }
 
@@ -269,11 +252,11 @@ nav a {
     font-size: 20px;
   }
 
+  /* Hero Banner Styles */
 
   .hero-banner {
     align-items: center;
     justify-content: center;
-
   }
 
   .hero-banner h2 {
@@ -282,40 +265,43 @@ nav a {
     font-size: 25px;
   }
 
+  /* Portfolio Sections Styles */
+
   #about,
   #work,
   #contact {
     grid-template-columns: 100%;
     grid-template-areas: "title"
       "content";
-    padding: 0;
+      padding: 0;
   }
 
-  #title {
+  .title {
     text-align: center;
     padding: 0;
     margin-bottom: 20px;
   }
 
-  #content,
-  #footer {
+  .content,
+  .contact-links {
     border-top: 3px var(--color4) solid;
-
     border-left: none;
   }
 
-  #about p {
+  /* About Me Styles */
+
+  .content p {
     padding: 40px 20px;
   }
 
-  #footer {
+  /* Contact Me Styles */
+
+  .contact-links {
     padding: 40px 0;
   }
 
-  #footer a {
+  .contact-links a {
     font-size: 20px;
   }
 
 }
-
-/* check nav and footer classes and condense */
