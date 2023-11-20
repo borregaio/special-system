@@ -4,7 +4,7 @@
   --color3: #00337C;
   --color4: #1C82AD;
   --color5: #03C988;
-  
+
 }
 
 * {
@@ -62,6 +62,7 @@ nav a {
   color: var(--color1);
 }
 
+/*add class to nav
 
 /* Hero Banner Styles */
 
@@ -78,7 +79,7 @@ nav a {
 }
 
 .hero-banner h2 {
-  padding: 30px;
+  padding: 0 80px 50px 0;
   font-size: 40px;
   color: var(--color1);
   text-shadow: 3px 3px var(--color2);
@@ -92,7 +93,9 @@ nav a {
 
 /* Portfolio Sections Styles */
 
-#about, #work, #contact {
+#about,
+#work,
+#contact {
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
@@ -112,7 +115,8 @@ nav a {
   grid-area: content;
 }
 
-#content, #footer {
+#content,
+#footer {
   border-left: 3px var(--color4) solid;
 }
 
@@ -134,23 +138,34 @@ nav a {
   grid-template-rows: 300px 200px 200px;
   grid-template-columns: 45% 45%;
   grid-template-areas: "project1 project1"
-  "project2 project3"
-  "project4 project5";
+    "project2 project3"
+    "project4 project5";
   padding: 50px 0 50px 0;
   gap: 30px;
   justify-content: center;
 }
 
-.project1, .project2, .project3, .project4, .project5 {
+.project1,
+.project2,
+.project3,
+.project4,
+.project5 {
   border: 10px var(--color4) solid;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project2, .project3, .project4, .project5 {
+.project2,
+.project3,
+.project4,
+.project5 {
   background-image: url(../images/project2.jpg);
-} 
+}
 
 .project1 {
   grid-area: project1;
@@ -173,6 +188,13 @@ nav a {
   grid-area: project5;
 }
 
+#projects h3 {
+  text-align: center;
+  color: var(--color1);
+  text-shadow: 2px 2px var(--color2);
+  font-size: 25px;
+}
+
 
 /* Contact Me Styles */
 
@@ -182,11 +204,118 @@ nav a {
 
 #footer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
+  padding-top: 60px;
 }
 
 #footer a {
   font-size: 20px;
 }
+
+
+/* Media Queries  */
+/* 768 tablets
+480 phones */
+
+@media only screen and (max-width: 768px) {
+
+  #projects {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 90%;
+    grid-template-areas: "project1"
+      "project2"
+      "project3"
+      "project4"
+      "project5";
+  }
+
+  #footer {
+    justify-content: center;
+  }
+
+  #footer a {
+    font-size: 16px;
+    ;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  header {
+    height: 100%;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  header h1 {
+    margin-left: 0;
+    ;
+    padding: 30px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav a {
+    margin-right: 0;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+
+
+  .hero-banner {
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .hero-banner h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+  }
+
+  #about,
+  #work,
+  #contact {
+    grid-template-columns: 100%;
+    grid-template-areas: "title"
+      "content";
+    padding: 0;
+  }
+
+  #title {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  #content,
+  #footer {
+    border-top: 3px var(--color4) solid;
+
+    border-left: none;
+  }
+
+  #about p {
+    padding: 40px 20px;
+  }
+
+  #footer {
+    padding: 40px 0;
+  }
+
+  #footer a {
+    font-size: 20px;
+  }
+
+}
+
+/* check nav and footer classes and condense */
