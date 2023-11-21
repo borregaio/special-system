@@ -41,43 +41,44 @@ code .
 ## Steps Followed to Create the Website
 
 1. **HTML Structure:**
-   - Develop the HTML structure, focusing on creating sections for different aspects of the portfolio, such as skills, projects, and contact information.
+   - Develop the HTML structure, focusing on creating sections for different aspects of the portfolio, such as projects and contact information.
    
       ```html
-         <section id="work">
-            <h2 class="title">Work</h2>
-            <div class="content">
-            <div id="projects">
-               <div class="project1">
-                  <h3>Project 1</h3>
-               </div>
-               <div class="project2">
-                  <h3>Project 2</h3>
-               </div>
-               <div class="project3">
-                  <h3>Project 3</h3>
-               </div>
-               <div class="project4">
-                  <h3>Project 4</h3>
-               </div>
-               <div class="project5">
-                  <h3>Project 5</h3>
-               </div>
+      <section id="work">
+         <h2 class="title">Work</h2>
+         <div class="content">
+         <div id="projects">
+            <div class="project1">
+               <h3>Project 1</h3>
             </div>
+            <div class="project2">
+               <h3>Project 2</h3>
             </div>
-         </section>
+            <div class="project3">
+               <h3>Project 3</h3>
+            </div>
+            <div class="project4">
+               <h3>Project 4</h3>
+            </div>
+            <div class="project5">
+               <h3>Project 5</h3>
+            </div>
+         </div>
+         </div>
+      </section>
       ```
+
       ```html
-         <section id="contact">
-            <h2 class="title">Contact<br> Me</h2>
-            <nav class="contact-links">
+      <section id="contact">
+          <h2 class="title">Contact<br> Me</h2>
+          <nav class="contact-links">
             <a href="#">Phone</a>
             <a href="#">Email</a>
             <a href="#">LinkedIn</a>
             <a href="#">GitHub</a>
             <a href="#">Twitter</a>
-            </nav>
-         </section>
+          </nav>
+      </section>
       ```
 
 2. **CSS Styling with Flexbox:**
