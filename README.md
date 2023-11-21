@@ -9,7 +9,7 @@ The Carlos Borrega Portfolio Website consists in building a portfolio website en
 
 ## Deployment
 
-The deployed version of the Caros Borrega Portfolio Website can be accessed [here](https://borregaio.github.io/special-system/).
+The deployed version of the Carlos Borrega Portfolio Website can be accessed [here](https://borregaio.github.io/special-system/).
 
 
 ## Key Objectives
@@ -38,10 +38,10 @@ cd special-system
 code .
 ```
 
-## Steps Followed to Create the Website
+## Steps Followed to Create the Portfolio Website
 
 1. **HTML Structure:**
-   - Develop the HTML structure, focusing on creating sections for different aspects of the portfolio, such as projects and contact information.
+   - Developed the HTML structure, focusing on creating sections for different aspects of the portfolio, such as projects and contact information.
    
       ```html
       <section id="work">
@@ -82,7 +82,7 @@ code .
       ```
 
 2. **CSS Styling with Flexbox:**
-   - Implement Flexbox to create a flexible and efficient layout for the portfolio.
+   - Implemented Flexbox to create a flexible and efficient layout for the portfolio.
 
       ```css
       .hero-banner {
@@ -97,7 +97,7 @@ code .
          justify-content: end;
          }
       ```
-   - Style each section with CSS to achieve the desired visual design.
+   - Styled each section with CSS to achieve the desired visual design.
 
       ```css
          #about,
@@ -126,7 +126,7 @@ code .
       ```
 
 3. **Integrating CSS Variables:**
-   - Utilize CSS variables to centralize styling parameters, allowing for easy customization and maintenance.
+   - Utilised CSS variables to centralise styling parameters, allowing for easy customization and maintenance.
 
       ```css
          :root {
@@ -139,7 +139,7 @@ code .
       ```
 
 4. **Media Queries for Responsiveness:**
-   - Implement media queries to ensure the website is responsive on tablets and mobile phones.
+   - Implemented media queries to ensure the website is responsive on tablets and mobile phones.
 
       ```css
          /* Tablet Styles */
