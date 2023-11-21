@@ -43,7 +43,7 @@ code .
 1. **HTML Structure:**
    - Develop the HTML structure, focusing on creating sections for different aspects of the portfolio, such as skills, projects, and contact information.
    
-         ```html
+      ```html
          <section id="work">
             <h2 class="title">Work</h2>
             <div class="content">
@@ -66,10 +66,9 @@ code .
             </div>
             </div>
          </section>
-         ```
-
-         ```html
-            <section id="contact">
+      ```
+      ```html
+         <section id="contact">
             <h2 class="title">Contact<br> Me</h2>
             <nav class="contact-links">
             <a href="#">Phone</a>
@@ -79,7 +78,7 @@ code .
             <a href="#">Twitter</a>
             </nav>
          </section>
-         ```
+      ```
 
 2. **CSS Styling with Flexbox:**
    - Implement Flexbox to create a flexible and efficient layout for the portfolio.
